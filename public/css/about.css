@@ -1,0 +1,73 @@
+::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (min-width: 319px) and (max-width: 639px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+
+  #job {
+    display: none;
+  }
+  #about {
+    width: 75%;
+  }
+  ul {
+    flex-direction: column;
+    gap: 0px;
+  }
+  #bottom h2 {
+    font-size: 25px;
+  }
+  #section p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #bottom li {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0;
+  }
+  #bottom-content ul {
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in {
+    display: none;
+  }
+  #job {
+    display: none;
+  }
+  #about {
+    width: 80%;
+  }
+  ul {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1203px) {
+
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #job {
+    width: 600px;
+    height: 400px;
+  }
+  #top {
+    flex-direction: column;
+  }
+  #about {
+    width: 80%;
+  }
+}

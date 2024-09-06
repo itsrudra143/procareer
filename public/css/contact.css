@@ -1,0 +1,79 @@
+::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  #contact,
+  header button {
+    display: none;
+  }
+  #form input,
+  #form textarea {
+    width: 350px;
+  }
+  main p,
+  main label {
+    font-size: 14px;
+  }
+  #heading {
+    font-size: 32px;
+  }
+  #content {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in {
+    display: none;
+  }
+  #form input,
+  #form textarea {
+    width: 450px;
+  }
+  main h2 {
+    font-size: 45px;
+  }
+  main p {
+    font-size: 16px;
+  }
+  #content {
+    padding: 0;
+  }
+  main {
+    padding: 0;
+  }
+  #contact {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #form input,
+  #form textarea {
+    width: 350px;
+  }
+  main h2 {
+    font-size: 45px;
+  }
+  main p {
+    font-size: 16px;
+  }
+  #content {
+    padding: 0;
+  }
+  main {
+    padding: 0;
+  }
+  #contact {
+    width: 800px;
+    height: 400px;
+  }
+}

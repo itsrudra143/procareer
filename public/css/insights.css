@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 319px) and (max-width: 639px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #table,
+  #row1,
+  #row2 {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1200px) {
+  #footer-top {
+    display: none;
+  }
+    #table,
+  #row1,
+  #row2 {
+    flex-wrap: wrap;
+  }
+}

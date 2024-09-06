@@ -1,0 +1,174 @@
+@media only screen and (min-width: 319px) and (max-width: 639px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #register {
+    display: none;
+  }
+  #content h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  #content p {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  #form {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
+  #main input {
+    width: 250px;
+  }
+  #name {
+    flex-direction: column;
+  }
+  #signup {
+    width: 250px;
+  }
+  #form-bottom {
+    width: 300px;
+  }
+  #first-name {
+    align-items: center;
+  }
+  #last-name {
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in {
+    display: none;
+  }
+  #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #register {
+    display: none;
+  }
+  #content h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  #content p {
+    font-size: 18px;
+    text-align: center;
+  }
+  #form {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
+  #main input {
+    width: 420px;
+  }
+  #name {
+    flex-direction: column;
+  }
+  #signup {
+    width: 420px;
+  }
+  #form-bottom {
+    width: 300px;
+  }
+  #first-name {
+    align-items: center;
+  }
+  #last-name {
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+    #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* #register {
+    display: none;
+  } */
+  #content h1 {
+    font-size: 52px;
+    text-align: center;
+  }
+  #content p {
+    font-size: 15px;
+    text-align: center;
+  }
+  #form {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+  }
+  #main input {
+    width: 250px;
+  }
+  #name {
+    flex-direction: column;
+  }
+  #signup {
+    width: 250px;
+  }
+  #form-bottom {
+    width: 250px;
+  }
+  #first-name {
+    align-items: center;
+  }
+  #last-name {
+    align-items: center;
+  }
+  #register{
+    height: 380px;
+    width: 380px;
+  }
+  #center{
+    gap: 30px;
+  }
+}
+::-webkit-scrollbar{
+    display: none;
+}

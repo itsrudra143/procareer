@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/jobs.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white w-screen relative overflow-x-hidden">
+    <%- include("../partials/header.ejs") %>
+    <main class="flex items-center justify-center p-12">
+      <div class="flex items-start justify-center gap-8">
+        <div id="left-part" class="flex items-start justify-center flex-col">
+          <div
+            class="bg-black text-white p-4 rounded-xl flex items-start justify-center flex-col gap-3"
+          >
+            <h3 class="text-xl font-semibold">
+              Your partner in finding <br />the perfect career fit
+            </h3>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+              <a href="/about">Learn More</a>
+            </button>
+          </div>
+        </div>
+        <div id="right-part">
+          <div id="container" class="grid grid-cols-3 gap-6 overflow-y-scroll">
+            <% if (foundJobs) { %> <% foundJobs.map(job => { %>
+            <div
+              class="card bg-pink-100 p-4 rounded-xl shadow-sm flex items-start justify-center flex-col gap-1"
+            >
+              <div class="flex justify-between items-start">
+                <div class="flex items-start justify-center flex-col gap-1">
+                  <span class="text-sm text-gray-500"
+                    ><%= job.postedDate?job.postedDate:'no post date' %></span
+                  >
+                  <div class="flex items-center justify-center gap-14">
+                    <h3 class="text-xl font-semibold">
+                      <%= job.jobTitle?job.jobTitle:"" %>
+                    </h3>
+                    <img
+                      src="<%= job.jobCompanyLogo?job.jobCompanyLogo : 'Unknown Company' %>"
+                      class="w-8 h-8"
+                      alt="no company logo"
+                    />
+                  </div>
+                  <span class="text-gray-500">
+                    <%= job.jobCompanyName?job.jobCompanyName:'unknown' %>
+                  </span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 job-desc container">
+                <div class="first-row">
+                  <span
+                    class="text-sm bg-transparent border-[1px] border-[#818a9a] px-3 py-1 rounded-full"
+                    ><%=job.jobType?job.jobType:''%></span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-evenly items-center gap-7">
+                <span class="text-lg font-semibold whitespace-nowrap"
+                  >$<%=job.salaryRange?job.salaryRange:'Salary'%>/yr</span
+                >
+                <span class="text-sm text-gray-500 whitespace-pre-line"
+                  ><%= job.jobLocation?job.jobLocation:'location' %></span
+                >
+                <button
+                  class="bg-black text-white px-3 py-1.5 rounded-lg text-sm"
+                >
+                  <a href="/job-details/<%= job._id %>">Details</a>
+                </button>
+              </div>
+            </div>
+            <% }) %> <% } else { %>
+            <p>no jobs yet</p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+    <script>
+      const jobCards = document.querySelectorAll(".card");
+      const bgArr = [
+        "bg-pink-100",
+        "bg-green-100",
+        "bg-yellow-50",
+        "bg-red-100",
+        "bg-teal-100",
+        "bg-violet-100",
+      ];
+      jobCards.forEach((jobCard) => {
+        let randomColorIndex = Math.floor(Math.random() * bgArr.length);
+        jobCard.classList.add(bgArr[randomColorIndex]);
+      });
+    </script>
+  </body>
+</html>

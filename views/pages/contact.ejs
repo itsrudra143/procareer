@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center flex-col">
+    <%- include("../partials/header.ejs") %>
+    <main class="flex items-center justify-center flex-col p-4">
+      <h2 id="heading" class="text-[70px] font-bold text-[#1f4a79]">
+        Contact Us
+      </h2>
+      <p class="text-gray-600">
+        Please fill in the form below so we can respond to your inquiry
+      </p>
+      <div id="content" class="flex items-center justify-center pl-10 gap-6">
+        <div>
+          <img
+            src="./images/contact.jpg"
+            alt=""
+            class="h-[600px] w-[1200px]"
+            id="contact"
+          />
+        </div>
+        <div
+          id="form"
+          class="w-full bg-white p-8 rounded-lg flex items-center justify-center flex-col gap-3"
+        >
+          <form class="flex items-start justify-center gap-2 flex-col">
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium"
+                >First Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="Type your first name here"
+                class="w-[500px] bg-gray-200 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600 required:"
+              />
+            </div>
+
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium"
+                >Last Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="Type your last name here"
+                class="w-[500px] bg-gray-200 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
+
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium"
+                >Email <span class="text-red-500">*</span></label
+              >
+              <input
+                type="email"
+                placeholder="Type your email address here"
+                class="w-[500px] bg-gray-200 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium"
+                >Subject <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="Insert a subject line here"
+                class="w-[500px] bg-gray-200 border border-gray-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
+
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium">File Upload</label>
+              <input
+                type="file"
+                class="w-[500px] text-gray-700 py-2 px-4 border border-gray-300 rounded cursor-pointer bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+              <p class="text-gray-500 text-sm mt-1">
+                [File size : 2MB pdf, jpeg, png]
+              </p>
+            </div>
+
+            <div class="flex items-start justify-center flex-col gap-2">
+              <label class="text-gray-700 font-medium"
+                >Message <span class="text-red-500">*</span></label
+              >
+              <textarea
+                placeholder="Please describe your issue."
+                class="w-[500px] bg-gray-200 border border-gray-300 rounded py-2 px-4 h-32 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              ></textarea>
+            </div>
+            <div class="flex justify-end">
+              <button
+                type="submit"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

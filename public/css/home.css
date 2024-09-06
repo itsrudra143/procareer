@@ -1,0 +1,498 @@
+.oval-1 {
+  width: 9rem;
+  height: 25rem;
+  border: 12px solid rgba(255, 255, 255, 0.445);
+  background-color: transparent;
+  border-radius: 50%;
+  /* margin: 0 2rem; */
+  z-index: 1;
+  transform: rotate(-30deg);
+  position: relative;
+  left: 0;
+  bottom: 8rem;
+}
+
+.oval-2 {
+  width: 10rem;
+  height: 25rem;
+  border: 12px solid rgba(255, 255, 255, 0.445);
+  background-color: transparent;
+  border-radius: 50%;
+  /* margin: 0 2rem; */
+  z-index: 1;
+  transform: rotate(43deg);
+  position: relative;
+  right: -3rem;
+  bottom: 8rem;
+  /* border-bottom-color: transparent; */
+}
+
+.arc-1 {
+  width: 100px;
+  height: 300px;
+  border: 12px solid rgba(255, 255, 255, 0.445);
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(45deg);
+  bottom: -4rem;
+  position: relative;
+}
+
+.arc-2 {
+  width: 100px;
+  height: 300px;
+  border: 12px solid rgba(255, 255, 255, 0.445);
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(-45deg);
+  bottom: 5rem;
+  left: -5rem;
+  position: relative;
+}
+
+.arc-3 {
+  width: 18rem;
+  height: 25rem;
+  border: 28px solid rgba(255, 255, 255, 0.445);
+  border-radius: 50%;
+  transform: rotate(30deg);
+  position: absolute;
+  border-right-color: transparent;
+}
+
+.arc-5 {
+  width: 23rem;
+  height: 23rem;
+  border: 32px solid rgba(255, 255, 255, 0.455);
+  border-radius: 50%;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+
+  #companies,
+  #sec1-left #location,
+  #sec1-left #type label {
+    display: none;
+  }
+  #sec1-right {
+    display: none;
+  }
+  #sec1-left h1 {
+    font-size: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+  }
+  #sec1-left #search {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  #sec1-left #search #type {
+    border-color: transparent;
+    padding: 0;
+  }
+  #sec1-left #type input {
+    padding: 0;
+    font-size: 12px;
+  }
+  #sec1-left button {
+    padding: 5px;
+    height: 40px;
+    gap: 2px;
+    font-size: 12px;
+  }
+  #sec1-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  #sec2-main {
+    flex-direction: column;
+  }
+  #sec2-left h1,
+  #sec2-left h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+  #sec2-left-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left-bottom button {
+    padding: 4px;
+    font-size: 12px;
+  }
+  #sec2-left-bottom button i {
+    height: 28px;
+    width: 28px;
+  }
+  #sec2-right {
+    flex-direction: column;
+  }
+  #sec2-right .cards {
+    width: 220px;
+    height: 50px;
+    font-size: 12px;
+    justify-content: start;
+    padding-left: 15px;
+  }
+  #sec2-right img {
+    height: 32px;
+    width: 32px;
+  }
+  #sec2-right #box-1 {
+    gap: 0px;
+  }
+  #sec2-right #box-2 {
+    gap: 0;
+  }
+  #sec3-left {
+    display: none;
+  }
+  #sec3-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  #sec3-right h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  #sec3-right p {
+    font-size: 10px;
+    text-align: center;
+    width: 400px;
+  }
+  #sec3-right button {
+    padding: 5px;
+    font-size: 12px;
+  }
+  #sec4-right {
+    display: none;
+  }
+  #sec4-left h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  #sec4-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec4-left p {
+    width: 400px;
+    text-align: center;
+    font-size: 12px;
+  }
+  #sec4-left #quality,
+  #sec4-left #charge,
+  #sec4-left #company,
+  #sec4-left #job {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  #companies {
+    display: none;
+  }
+  #nav-bar,
+  #footer-top,
+  #sign-in {
+    display: none;
+  }
+
+  #sec1-right {
+    display: none;
+  }
+  #sec1-left h1 {
+    font-size: 58px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  #sec2-main {
+    flex-direction: column;
+  }
+  #sec2-left h1,
+  #sec2-left h3 {
+    font-size: 52px;
+    text-align: center;
+  }
+  #sec2-left-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #sec2-left-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left-bottom button {
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  #sec2-right {
+    flex-wrap: wrap;
+  }
+  #sec2-right .cards {
+    width: 220px;
+    height: 50px;
+    font-size: 12px;
+    justify-content: start;
+    padding-left: 15px;
+  }
+  #sec2-right img {
+    height: 32px;
+    width: 32px;
+  }
+  #sec2-right #box-1 {
+    gap: 0px;
+  }
+  #sec2-right #box-2 {
+    gap: 0;
+  }
+  #sec3-left {
+    display: none;
+  }
+  #sec3-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  #sec3-right h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #sec3-right p {
+    font-size: 13px;
+    text-align: center;
+    width: 400px;
+    line-height: 25px;
+  }
+  #sec3-right button {
+    padding: 5px;
+    font-size: 15px;
+  }
+  #sec4-right {
+    display: none;
+  }
+  #sec4-left h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #sec4-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec4-left p {
+    width: 400px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  #sec4-left #quality,
+  #sec4-left #charge,
+  #sec4-left #company,
+  #sec4-left #job {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 961px) and (max-width: 1380px) {
+  #companies {
+    display: none;
+  }
+  
+  #footer-top,
+  #sign-in {
+    display: none;
+  }
+
+  #sec1-right {
+    display: none;
+  }
+  #sec1-left h1 {
+    font-size: 58px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec1-left p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  #sec2-main {
+    flex-direction: column;
+  }
+  #sec2-left h1,
+  #sec2-left h3 {
+    font-size: 52px;
+    text-align: center;
+  }
+  #sec2-left-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #sec2-left-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec2-left-bottom button {
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  #sec2-right {
+    flex-wrap: wrap;
+  }
+  #sec2-right .cards {
+    width: 220px;
+    height: 50px;
+    font-size: 12px;
+    justify-content: start;
+    padding-left: 15px;
+  }
+  #sec2-right img {
+    height: 32px;
+    width: 32px;
+  }
+  #sec2-right #box-1 {
+    gap: 0px;
+  }
+  #sec2-right #box-2 {
+    gap: 0;
+  }
+  #sec3-left #software{
+    left: 20rem;
+    bottom: 40rem;
+  }
+  #sec3-left #trusted{
+    display: none;
+  }
+  #sec4-right #trusted{
+    display: none;
+  }
+  #sec3-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  #sec3-right h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #sec3-right p {
+    font-size: 13px;
+    text-align: center;
+    width: 400px;
+    line-height: 25px;
+  }
+  #sec3-right button {
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  #sec4-left h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  #sec4-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sec4-left p {
+    width: 400px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  #sec4-left #quality,
+  #sec4-left #charge,
+  #sec4-left #company,
+  #sec4-left #job {
+    width: 150px;
+  }
+}

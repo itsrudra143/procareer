@@ -1,0 +1,78 @@
+<header class="bg-[#c2e4ff] w-screen">
+  <nav class="flex items-center justify-evenly p-7">
+    <div id="logo" class="flex items-center justify-center gap-2">
+      <i
+        class="fa-thin fa-puzzle fa-flip-horizontal text-[#2d2d2d] text-2xl"
+      ></i>
+      <a href="/" class="text-xl text-[#2d2d2d] font-semibold">PROCAREER</a>
+    </div>
+    <div id="nav-bar" class="flex items-center gap-7">
+      <a
+        href="/"
+        class="text-[#2d2d2d] font-medium hover:text-blue-800 hover:underline"
+        >Home</a
+      >
+      <a
+        href="/jobs"
+        class="text-[#2d2d2d] font-medium hover:text-blue-800 hover:underline"
+        >Jobs</a
+      >
+
+      <a
+        href="/about"
+        class="text-[#2d2d2d] font-medium hover:text-blue-800 hover:underline"
+        >About Us</a
+      >
+      <a
+        href="/contact"
+        class="text-[#2d2d2d] font-medium hover:text-blue-800 hover:underline"
+        >Contact Us</a
+      >
+    </div>
+    <div class="flex items-center gap-4 relative z-20">
+      <% if (foundUser) { %>
+      <a
+        id="sign-in"
+        href="/api/auth/logout"
+        class="text-[#2d2d2d] font-medium hover:text-blue-600"
+        >Logout</a
+      >
+      <% } else { %>
+      <a
+        id="sign-in"
+        href="/login"
+        class="text-[#2d2d2d] font-medium hover:text-blue-600"
+        >Sign In</a
+      >
+      <% } %> <% if ((foundUser&&foundUser.role==="employee")||!foundUser) { %>
+      <a
+        href="/profile"
+        class="bg-[#4383d6] text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Upload Resume <i class="fa-solid fa-upload ml-2"></i>
+      </a>
+      <% } else { %>
+      <a
+        href="/postjob"
+        class="bg-[#4383d6] text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Post a Job <i class="fa-solid fa-upload ml-2"></i>
+      </a>
+      <% } %>
+
+      <a href="/profile">
+        <% if (foundUser) { %>
+        <p
+          class="text-blue-600 border-[1px] border-blue-600 rounded-full text-2xl w-10 h-10 flex items-center justify-center"
+        >
+          <%= foundUser.firstName.charAt(0).toUpperCase() %>
+        </p>
+        <% } else { %>
+        <i
+          class="fa-light fa-user-secret text-blue-600 border-[1px] border-blue-600 rounded-full py-2 px-3 text-2xl"
+        ></i>
+        <% } %>
+      </a>
+    </div>
+  </nav>
+</header>

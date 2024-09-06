@@ -1,0 +1,99 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 319px) and (max-width: 715px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #left-part {
+    display: none;
+  }
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+  }
+}
+@media only screen and (min-width: 716px) and (max-width: 767px) {
+  #nav-bar,
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #left-part {
+    display: none;
+  }
+
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #container .first-row,
+  #container .second-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  #container .job-desc {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #card1,
+  #card2,
+  #card3,
+  #card4,
+  #card5,
+  #card6 {
+    width: 300px;
+    height: 275px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+  
+  #footer-top,
+  #sign-in,
+  header button {
+    display: none;
+  }
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #container .first-row,
+  #container .second-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  #container .job-desc {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #card1,
+  #card2,
+  #card3,
+  #card4,
+  #card5,
+  #card6 {
+    width: 300px;
+    height: 275px;
+  }
+}

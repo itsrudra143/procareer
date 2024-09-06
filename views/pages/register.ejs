@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-screen relative overflow-x-hidden">
+    <%- include("../partials/header.ejs") %>
+    <div
+      id="content"
+      class="flex items-center justify-center flex-col gap-5 py-10"
+    >
+      <h1 class="text-[#1f4a79] text-[70px] font-bold">
+        Sign-up and apply for free
+      </h1>
+      <p class="text-[#2d2d2d] font-semibold text-xl">
+        1,50,000 companies hiring on ProCareer
+      </p>
+      <div id="center" class="flex items-center justify-center gap-32">
+        <div
+          id="main"
+          class="bg-white p-6 rounded-lg shadow-2xl shadow-[#80b2dc] flex items-center justify-center gap-2"
+        >
+          <form
+            id="form"
+            class="w-[350px] flex items-start justify-center flex-col gap-2.5"
+            action="/api/auth/register"
+          >
+            <label for="email" class="text-[#2d2d2d] font-semibold"
+              >Email</label
+            >
+            <input
+              name="email"
+              type="email"
+              id="email"
+              class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+              placeholder="john@example.com"
+            />
+            <label for="password" class="text-[#2d2d2d] font-semibold"
+              >Password</label
+            >
+            <input
+              name="password"
+              type="password"
+              id="password"
+              class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+              placeholder="Must be at least 6 characters"
+            />
+            <label for="phone" class="text-[#2d2d2d] font-semibold"
+              >Phone Number</label
+            >
+            <input
+              name="phone"
+              type="tel"
+              id="phone"
+              class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+              placeholder="123-456-7890"
+            />
+            <label for="role" class="text-[#2d2d2d] font-semibold">Role</label>
+            <select
+              id="role"
+              name="role"
+              class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+              required
+            >
+              <option value="" disabled selected>Select your role</option>
+              <option value="employee">Employee</option>
+              <option value="employer">Employer</option>
+            </select>
+            <div id="name" class="flex items-center justify-center gap-3">
+              <div
+                id="first-name"
+                class="flex items-start justify-center flex-col"
+              >
+                <label for="first-name" class="text-[#2d2d2d] font-semibold"
+                  >First Name</label
+                >
+                <input
+                  name="firstName"
+                  type="text"
+                  id="first-name"
+                  class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+                  placeholder="John"
+                />
+              </div>
+
+              <div
+                id="lastName"
+                class="flex items-start justify-center flex-col"
+              >
+                <label for="last-name" class="text-[#2d2d2d] font-semibold"
+                  >Last Name</label
+                >
+                <input
+                  name="lastName"
+                  type="text"
+                  id="last-name"
+                  class="shadow border rounded w-full py-2 px-3 text-[#2d2d2d] focus:outline-none focus:shadow-outline"
+                  placeholder="Doe"
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <p class="text-gray-600 text-sm">
+                By signing up, you agree to our
+                <a href="#" class="text-blue-500 hover:underline"
+                  >Terms and Conditions</a
+                >.
+              </p>
+            </div>
+            <div
+              id="form-bottom"
+              class="flex items-center justify-center flex-col gap-1"
+            >
+              <button
+                id="signup"
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-[350px] focus:outline-none focus:shadow-outline"
+              >
+                Sign up
+              </button>
+              <p class="text-[#2d2d2d]">
+                Already have an account ?
+                <span class="text-blue-500"><a href="/login">Login</a></span>
+              </p>
+            </div>
+          </form>
+        </div>
+        <img
+          src="./images/register.jpg"
+          alt=""
+          class="h-[500px] w-[500px]"
+          id="register"
+        />
+      </div>
+    </div>
+    <%- include("../partials/footer.ejs") %>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Gather form data
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            // Send a POST request
+            const response = await fetch("/api/auth/register", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              // Handle successful response
+              const result = await response.json();
+              window.location.href = "/";
+              // alert("Registration successful!");
+              // Optionally redirect or clear the form
+              form.reset();
+            } else {
+              // Handle errors
+              const error = await response.json();
+              console.log(`Error: ${error.message}`);
+            }
+          } catch (error) {
+            // Handle network or other errors
+            console.log("An error occurred:", error);
+            console.log(
+              "An error occurred while registering. Please try again."
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

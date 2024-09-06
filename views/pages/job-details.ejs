@@ -1,0 +1,222 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details - Senior UI/UX Designer</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/job-details.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <%- include("../partials/header.ejs") %>
+    <main class="flex items-center justify-center flex-col p-6">
+      <div
+        class="bg-white p-8 rounded-lg shadow-xl flex items-start justify-center gap-5 flex-col"
+      >
+        <% if (foundJob) { %>
+        <h2 class="text-3xl font-bold text-gray-800">
+          <%=foundJob.jobTitle?foundJob.jobTitle:'Job title' %>
+        </h2>
+        <p class="text-gray-600">
+          <strong>Date Posted: </strong><%=
+          foundJob.postedDate?foundJob.postedDate:'Job date' %>
+        </p>
+        <p class="text-gray-600">
+          <strong>Location: </strong><%=
+          foundJob.jobLocation?foundJob.jobLocation:'Job location' %>
+        </p>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Job Description</h3>
+          <p class="text-gray-700">
+            <%= foundJob.jobDescription?foundJob.jobDescription:'Job desc' %>
+          </p>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Qualifications</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <% foundJob.jobRequirements.forEach(req => { %>
+            <li><%= req %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Salary</h3>
+          <p class="text-gray-700">$<%= foundJob.salaryRange %>/yr</p>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">
+            About <%= foundJob.jobCompanyName?foundJob.jobCompanyName:'unknown'
+            %>
+          </h3>
+          <p class="text-gray-700">
+            <%= foundJob.jobCompanyDesc?foundJob.jobCompanyDesc:'unknown' %>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="/apply"
+            class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+            >Apply Now</a
+          >
+        </div>
+        <% } else{%>
+        <p>no such job</p>
+        <% } %>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details - Senior UI/UX Designer</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/job-details.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="bg-gray-100">
+    <%- include("../partials/header.ejs") %>
+    <main class="flex items-center justify-center flex-col p-6">
+      <div
+        class="bg-white p-8 rounded-lg shadow-xl flex items-start justify-center gap-5 flex-col"
+      >
+        <% if (foundJob) { %>
+        <h2 class="text-3xl font-bold text-gray-800">
+          <%=foundJob.jobTitle?foundJob.jobTitle:'Job title' %>
+        </h2>
+        <p class="text-gray-600">
+          <strong>Date Posted: </strong><%=
+          foundJob.postedDate?foundJob.postedDate:'Job date' %>
+        </p>
+        <p class="text-gray-600">
+          <strong>Location: </strong><%=
+          foundJob.jobLocation?foundJob.jobLocation:'Job location' %>
+        </p>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Job Description</h3>
+          <p class="text-gray-700">
+            <%= foundJob.jobDescription?foundJob.jobDescription:'Job desc' %>
+          </p>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Qualifications</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <% foundJob.jobRequirements.forEach(req => { %>
+            <li><%= req %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">Salary</h3>
+          <p class="text-gray-700">$<%= foundJob.salaryRange %>/yr</p>
+        </div>
+
+        <div class="">
+          <h3 class="text-xl font-semibold text-gray-800">
+            About <%= foundJob.jobCompanyName?foundJob.jobCompanyName:'unknown'
+            %>
+          </h3>
+          <p class="text-gray-700">
+            <%= foundJob.jobCompanyDesc?foundJob.jobCompanyDesc:'unknown' %>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <button
+            id="applyNowBtn"
+            class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+          >
+            Apply Now
+          </button>
+        </div>
+        <% } else{%>
+        <p>no such job</p>
+        <% } %>
+      </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+
+    <script>
+      document
+        .getElementById("applyNowBtn")
+        .addEventListener("click", function () {
+          Swal.fire({
+            title: "Application Submitted!",
+            text: "Thank you for your interest. We will review your application and get back to you soon.",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        });
+    </script>
+  </body>
+</html>

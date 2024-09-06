@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Hide the default file input */
+      #profile-picture {
+        display: none;
+      }
+
+      /* Custom button styling */
+      #profile-picture-label {
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        background: #f0f0f0;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #profile-picture-label i {
+        font-size: 2rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main class="flex items-center justify-center">
+      <section
+        class="bg-white rounded-lg flex items-center justify-center flex-col p-4 gap-3"
+      >
+        <form
+          method="post"
+          action="/api/company/postjob"
+          class="flex items-center justify-center flex-col gap-1"
+          id="jobForm"
+        >
+          <!-- Job Title -->
+          <div id="job-title" class="flex flex-col w-[550px]">
+            <label for="jobTitle" class="text-sm font-medium text-gray-700">
+              Job Title <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="jobTitle"
+              name="jobTitle"
+              placeholder="e.g., Software Engineer"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            />
+          </div>
+
+          <!-- Job Description -->
+          <div id="job-description" class="flex flex-col w-[550px]">
+            <label
+              for="jobDescription"
+              class="text-sm font-medium text-gray-700"
+            >
+              Job Description <span class="text-red-500">*</span>
+            </label>
+            <textarea
+              id="jobDescription"
+              name="jobDescription"
+              rows="4"
+              placeholder="Provide a detailed job description..."
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Job Requirements -->
+          <div id="job-requirements" class="flex flex-col w-[550px]">
+            <label
+              for="jobRequirements"
+              class="text-sm font-medium text-gray-700"
+            >
+              Job Requirements <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="jobRequirements"
+              name="jobRequirements"
+              placeholder="e.g., JavaScript, React, 3 years of experience"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            />
+          </div>
+
+          <!-- Job Location -->
+          <div id="job-location" class="flex flex-col w-[550px]">
+            <label for="jobLocation" class="text-sm font-medium text-gray-700">
+              Job Location <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="jobLocation"
+              name="jobLocation"
+              placeholder="e.g., New York, Remote"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            />
+          </div>
+
+          <!-- Job Type -->
+          <div id="job-type" class="flex flex-col w-[550px]">
+            <label for="jobType" class="text-sm font-medium text-gray-700">
+              Job Type <span class="text-red-500">*</span>
+            </label>
+            <select
+              id="jobType"
+              name="jobType"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            >
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Internship">Internship</option>
+            </select>
+          </div>
+
+          <!-- Salary Range -->
+          <div id="salary-range" class="flex flex-col w-[550px]">
+            <label for="salaryRange" class="text-sm font-medium text-gray-700">
+              Salary Range
+            </label>
+            <input
+              type="text"
+              id="salaryRange"
+              name="salaryRange"
+              placeholder="e.g., $50,000 - $70,000 per year"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+            />
+          </div>
+
+          <!-- Application Deadline -->
+          <div id="application-deadline" class="flex flex-col w-[550px]">
+            <label
+              for="applicationDeadline"
+              class="text-sm font-medium text-gray-700"
+            >
+              Application Deadline
+            </label>
+            <input
+              type="date"
+              id="applicationDeadline"
+              name="applicationDeadline"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+            />
+          </div>
+
+          <!-- Contact Email -->
+          <div id="contact-email" class="flex flex-col w-[550px]">
+            <label for="contactEmail" class="text-sm font-medium text-gray-700">
+              Contact Email <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="contactEmail"
+              placeholder="e.g., hr@company.com"
+              class="p-2 border border-gray-300 rounded-md shadow-sm"
+              required
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-800 mt-4"
+          >
+            Create Job Posting
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      function previewImage(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const preview = document.getElementById("profile-picture-preview");
+          const previewTwo = document.getElementById("company-logo-preview");
+          preview.src = e.target.result;
+          previewTwo.src = e.target.result;
+        };
+
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
+</html>

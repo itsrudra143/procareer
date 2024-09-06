@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="./css/about.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <section id="section" class="flex items-center justify-center flex-col">
+        <div id="top" class="flex items-center justify-center p-3 gap-12">
+          <img
+            src="./images/jobs.jpg"
+            alt=""
+            class="w-[800px] h-[500px]"
+            id="job"
+          />
+          <div
+            id="about"
+            class="gap-3 flex items-center justify-center flex-col w-[480px]"
+          >
+            <h1 class="text-[50px] font-bold text-center text-[#1f4a79]">
+              About ProCareer
+            </h1>
+            <p class="text-[16px] text-[#414141] text-justify">
+              Welcome to
+              <span class="font-bold text-blue-500">ProCareer</span>, your
+              one-stop platform for all things related to job searching and
+              career development. Our mission is to empower individuals to reach
+              their full potential by connecting them with the right
+              opportunities, resources, and tools to build a successful career.
+            </p>
+            <p class="text-[16px] text-[#414141] text-justify">
+              At ProCareer, we understand that finding the right job is more
+              than just matching skills to roles; it's about aligning your
+              career aspirations with opportunities that truly resonate with
+              you. That is why we have built a platform that not only helps you
+              discover job openings but also supports your continuous growth
+              through personalized career development resources.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            id="bottom"
+            class="flex items-center justify-center flex-col px-10"
+          >
+            <div
+              id="bottom-content"
+              class="bg-white rounded-lg p-10 gap-4 flex items-center justify-center flex-col text-justify"
+            >
+              <h2 class="text-3xl font-semibold text-[#1f4a79]">Our Vision</h2>
+              <p class="text-[16px] text-[#414141]">
+                We envision a world where everyone has access to meaningful work
+                that aligns with their passions and strengths. Through
+                ProCareer, we strive to bridge the gap between job seekers and
+                employers by offering an intuitive, user-friendly platform that
+                simplifies the job search process and enhances career growth.
+              </p>
+
+              <h2 class="text-3xl font-semibold text-[#1f4a79]">Our Mission</h2>
+              <ul class="text-[#414141] flex items-center justify-evenly gap-3">
+                <li class="text-[16px] p-3">
+                  <span class="font-bold text-blue-500">Connect:</span> Bridge
+                  the gap between talent and opportunities by providing a
+                  platform where job seekers can find roles that fit their
+                  skills and career goals.
+                </li>
+                <li class="text-[16px] p-3">
+                  <span class="font-bold text-blue-500">Empower:</span> Offer
+                  personalized career development resources, including courses,
+                  workshops, and mentorship, to help users grow professionally.
+                </li>
+                <li class="text-[16px] p-3">
+                  <span class="font-bold text-blue-500">Support:</span> Create a
+                  community where individuals can share insights, seek advice,
+                  and collaborate to advance their careers.
+                </li>
+              </ul>
+
+              <h2 class="text-3xl font-semibold text-[#1f4a79]">
+                Why Choose ProCareer?
+              </h2>
+              <ul class="list-disc list-inside">
+                <li class="text-[16px] text-[#414141]">
+                  <span class="font-bold text-blue-500"
+                    >Tailored Job Matches:</span
+                  >
+                  Our advanced algorithms ensure that you receive job
+                  recommendations that are aligned with your skills, experience,
+                  and career goals.
+                </li>
+                <li class="text-[16px] text-[#414141]">
+                  <span class="font-bold text-blue-500"
+                    >Career Development Tools:</span
+                  >
+                  From resume building to interview preparation, ProCareer
+                  offers a wide range of tools designed to help you succeed in
+                  your career journey.
+                </li>
+                <li class="text-[16px] text-[#414141]">
+                  <span class="font-bold text-blue-500"
+                    >Continuous Learning:</span
+                  >
+                  Stay ahead of the curve with access to industry-specific
+                  courses and certifications that enhance your skill set.
+                </li>
+                <li class="text-[16px] text-[#414141]">
+                  <span class="font-bold text-blue-500"
+                    >Community Support:</span
+                  >
+                  Connect with like-minded professionals, mentors, and industry
+                  experts to gain insights and advice on navigating your career
+                  path.
+                </li>
+              </ul>
+
+              <p class="text-[16px] text-[#414141]">
+                Join
+                <span class="font-bold text-blue-500">ProCareer</span> today and
+                take the next step towards achieving your career goals. Whether
+                you're just starting out or looking to advance in your field,
+                we're here to support you every step of the way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
