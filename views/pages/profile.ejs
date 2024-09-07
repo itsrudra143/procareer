@@ -220,8 +220,7 @@
               placeholder="Write a brief summary about yourself..."
               class="p-2 border border-gray-300 rounded-md shadow-sm"
             >
-            <%= foundUser.summary ? foundUser.summary.trim() : '' %>
-          </textarea
+<%= foundUser.summary ? foundUser.summary.trim() : '' %></textarea
             >
           </div>
           <div id="graduation" class="flex flex-col gap-1 w-[550px]">
@@ -334,7 +333,7 @@
             >
               <img
                 id="profile-picture-preview"
-                src="https://via.placeholder.com/150"
+                src="<%= foundCompany.logo || '' %>"
                 alt="Profile Picture Preview"
                 class="w-full h-full object-cover rounded-full border-2 border-gray-300"
               />
@@ -361,6 +360,7 @@
                 Company Name <span class="text-red-500">*</span>
               </label>
               <input
+                value="<%=foundCompany.companyName||''%>"
                 type="text"
                 id="companyName"
                 name="companyName"
@@ -376,6 +376,7 @@
                 Company Website
               </label>
               <input
+                value="<%=foundCompany.companyWebsite||''%>"
                 type="url"
                 id="companyWebsite"
                 name="companyWebsite"
@@ -397,6 +398,7 @@
                 Company Email <span class="text-red-500">*</span>
               </label>
               <input
+                value="<%=foundCompany.companyEmail||''%>"
                 type="email"
                 id="companyEmail"
                 name="companyEmail"
@@ -412,6 +414,7 @@
                 Company Phone <span class="text-red-500">*</span>
               </label>
               <input
+                value="<%=foundCompany.companyPhone||''%>"
                 type="tel"
                 id="companyPhone"
                 name="companyPhone"
@@ -429,6 +432,7 @@
               Company Address
             </label>
             <input
+              value="<%=foundCompany.companyAddress||''%>"
               type="text"
               id="companyAddress"
               name="companyAddress"
@@ -450,7 +454,9 @@
               rows="4"
               placeholder="Brief description about the company..."
               class="p-2 border border-gray-300 rounded-md shadow-sm"
-            ></textarea>
+            >
+<%=foundCompany.companyDescription||''%></textarea
+            >
           </div>
 
           <button

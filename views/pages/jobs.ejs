@@ -53,12 +53,29 @@
               <a href="/about">Learn More</a>
             </button>
           </div>
+          <div class="w-full flex mt-4">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search jobs..."
+              class="p-2 border border-gray-300 rounded-l-lg w-64"
+            />
+            <button
+              id="searchButton"
+              class="bg-blue-500 text-white px-4 py-2 rounded-r-lg"
+            >
+              Search
+            </button>
+          </div>
         </div>
         <div id="right-part">
-          <div id="container" class="grid grid-cols-3 gap-6 overflow-y-scroll">
+          <div
+            id="container"
+            class="h-[465px] inset-5 grid grid-cols-3 gap-6 overflow-y-scroll"
+          >
             <% if (foundJobs) { %> <% foundJobs.map(job => { %>
             <div
-              class="card bg-pink-100 p-4 rounded-xl shadow-sm flex items-start justify-center flex-col gap-1"
+              class="card bg-pink-100 p-4 rounded-xl shadow-sm flex items-start justify-center flex-col min-w-fit min-h-[244px] max-h-fit h-fit gap-3"
             >
               <div class="flex justify-between items-start">
                 <div class="flex items-start justify-center flex-col gap-1">
@@ -88,8 +105,8 @@
                   >
                 </div>
               </div>
-              <div class="flex justify-evenly items-center gap-7">
-                <span class="text-lg font-semibold whitespace-nowrap"
+              <div class="flex justify-evenly items-center gap-4">
+                <span class="text-lg font-semibold w-fit"
                   >$<%=job.salaryRange?job.salaryRange:'Salary'%>/yr</span
                 >
                 <span class="text-sm text-gray-500 whitespace-pre-line"
@@ -123,6 +140,36 @@
       jobCards.forEach((jobCard) => {
         let randomColorIndex = Math.floor(Math.random() * bgArr.length);
         jobCard.classList.add(bgArr[randomColorIndex]);
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const searchButton = document.getElementById("searchButton");
+
+      function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        jobCards.forEach((card) => {
+          const jobTitle = card.querySelector("h3").textContent.toLowerCase();
+          const companyName = card
+            .querySelector("span:nth-child(3)")
+            .textContent.toLowerCase();
+
+          if (
+            jobTitle.includes(searchTerm) ||
+            companyName.includes(searchTerm)
+          ) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+      searchInput.addEventListener("input", performSearch);
+      searchButton.addEventListener("click", performSearch);
+      searchInput.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+          performSearch();
+        }
       });
     </script>
   </body>

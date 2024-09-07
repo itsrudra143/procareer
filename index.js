@@ -74,8 +74,9 @@ app.get("/about", async (req, res) => {
   res.render("pages/about", { foundUser });
 });
 
-app.get("/contact", async (req, res) => {
+app.get("/profile", verifyToken, async (req, res) => {
   let foundUser = null;
+  let foundCompany = null;
   if (req.cookies.token) {
     try {
       const decodedToken = jwt.verify(
@@ -83,17 +84,12 @@ app.get("/contact", async (req, res) => {
         process.env.JWT_SECRET
       );
       foundUser = await User.findById(decodedToken.id);
+      foundCompany = await Company.findOne({ userId: foundUser._id });
     } catch (err) {
       console.log("Error verifying token:", err.message);
     }
   }
-  res.render("pages/contact", { foundUser });
-});
-
-app.get("/profile", verifyToken, async (req, res) => {
-  const userId = req.user.id;
-  const foundUser = await User.findById(userId);
-  res.render("pages/profile", { foundUser });
+  res.render("pages/profile", { foundUser, foundCompany });
 });
 
 app.get("/register", async (req, res) => {
